@@ -1,0 +1,214 @@
+@use '/src/style/variable.scss';
+
+.et-login-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+    .et-login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+
+        .et-login-navbar {
+            position: absolute;
+            top: 10px;
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: center;
+
+            .et-logo-content {
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+            }
+
+            .et-logo-name {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .et-create-acc {
+                margin-right: 15px;
+                font-weight: 600;
+            }
+
+
+        }
+
+        .et-login-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 350px;
+
+            .et-login-text {
+                font-size: 16px;
+            }
+
+            .et-social-login {
+                width: 100%;
+            }
+
+            .et-dynamic-login {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                border-radius: variable.$radius_small;
+                width: 100%;
+                border: 1px solid transparent;
+                background-color: #fff;
+                padding: 10px;
+                cursor: pointer;
+                transition: variable.$transition;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid variable.$es_purple;
+                }
+
+            }
+
+            .et-option-line {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+                justify-content: space-around;
+                color: #9f9f9f;
+            }
+
+            .et-line {
+                width: 40%;
+                border-top: 1px solid #dcdcde;
+            }
+
+            .et-login-form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+
+                input:focus-visible {
+                    outline: none;
+                }
+
+            }
+
+            .et-email-field {
+                width: 100%;
+                padding: 12px;
+                color: variable.$es_black;
+                font-size: 14px;
+                border-radius: variable.$radius_small;
+                border: 1px solid #e8f0fe;
+            }
+
+            .et-pass-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 1px solid #e8f0fe;
+                border-radius: variable.$radius_small;
+                overflow: hidden;
+
+                input {
+                    width: 92%;
+                    border: none;
+                    padding: 12px;
+                }
+
+                .et-eye-svg {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 16px;
+                    min-height: 16px;
+                    margin: 5px;
+                    width: 8%;
+                    cursor: pointer;
+                }
+            }
+
+            .et-remember-me {
+                display: flex;
+                align-items: center;
+                width: max-content;
+                gap: 5px;
+                cursor: pointer;
+
+                .et-remember-label {
+                    cursor: pointer;
+                }
+
+            }
+
+
+            .et-login-btn-container {
+                width: 100%;
+
+                .et-login-btn {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    .et-login-img {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        background: url('..//../public/images/login_bg.png') no-repeat center center;
+        height: 100%;
+        width: 40%;
+        border-radius: variable.$radius_big;
+
+        .et-main-logo {
+            background-color: white;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .et-logo-alt-text {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+    }
+
+}
+
+
+
+@media (max-width: 991px) {
+
+    .et-login-container {
+
+        .et-login-img {
+            display: none;
+        }
+
+        .et-login-page {
+            width: 100%;
+            
+            .et-login-navbar{
+                width: 100%;
+            }
+
+        }
+    }
+}
